@@ -8,7 +8,7 @@ const Topics = () => {
   return (
     <div>
       <Banner />
-      <div className="flex justify-around my-12">
+      <div className="md:flex md:justify-around my-12">
         {topics.data.map((topic) => (
           <Topic topic={topic} key={topic.id} />
         ))}

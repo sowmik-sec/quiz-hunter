@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Topic = ({ topic }) => {
   const { logo, name, total, id } = topic;
   return (
-    <div className="shadow-md m-1 p-3 w-72">
+    <div className="shadow-md m-1 p-3 w-72 mx-auto">
       <div className="bg-slate-300">
         <img src={logo} alt="" />
       </div>

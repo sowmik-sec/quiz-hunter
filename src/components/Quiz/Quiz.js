@@ -6,11 +6,11 @@ const Quiz = ({ qn, count }) => {
   const { options } = qn;
   console.log(options);
   return (
-    <div className="w-[700px] mx-auto h-auto my-6 shadow-md p-2">
+    <div className="md:w-[700px] md:mx-auto h-auto my-6 shadow-md p-2">
       <h3>
         <span>Quiz {count}:</span> {question}
       </h3>
-      <div className="grid grid-cols-2 text-left">
+      <div className="grid md:grid-cols-2 text-left">
         {options.map((option) => (
           <Options option={option} />
         ))}
