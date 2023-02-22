@@ -3,7 +3,7 @@ import React from "react";
 const Topic = ({ topic }) => {
   const { logo, name, total } = topic;
   return (
-    <div className="shadow-md m-1 p-3 w-64 ">
+    <div className="shadow-md m-1 p-3 w-72">
       <div className="bg-slate-300">
         <img src={logo} alt="" />
       </div>

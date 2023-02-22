@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <nav className="bg-purple-200 p-3 w-full flex justify-between">
       <div>
-        <Link>Quiz Hunter</Link>
+        <Link to={`/topics`}>Quiz Hunter</Link>
       </div>
       <div>
         <div onClick={() => setOpen(!open)} className="h-6 w-6 md:hidden">
