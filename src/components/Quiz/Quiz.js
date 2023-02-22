@@ -1,13 +1,20 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import Options from "../Options/Options";
 
-const Quiz = () => {
-  const quiz = useLoaderData();
-  console.log(quiz.data);
-  const { name } = quiz.data;
+const Quiz = ({ qn, count }) => {
+  const { question } = qn;
+  const { options } = qn;
+  console.log(options);
   return (
-    <div className="text-center my-12 text-teal-500">
-      <h3 className="text-2xl">Quiz of {name}</h3>
+    <div className="w-[700px] mx-auto h-auto my-6 shadow-md p-2">
+      <h3>
+        <span>Quiz {count}:</span> {question}
+      </h3>
+      <div className="grid grid-cols-2 text-left">
+        {options.map((option) => (
+          <Options option={option} />
+        ))}
+      </div>
     </div>
   );
 };
