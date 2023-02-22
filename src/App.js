@@ -1,9 +1,13 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
-import { Main } from "./layouts/Main";
+import { router } from "./layouts/router";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
 export default App;

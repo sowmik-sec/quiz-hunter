@@ -6,7 +6,6 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 const Header = () => {
   const [open, setOpen] = useState(false);
   const routes = [
-    { id: 1, name: "Home", path: "/home" },
     { id: 2, name: "Topics", path: "/topics" },
     { id: 3, name: "Statistics", path: "/statistics" },
     { id: 4, name: "Blog", path: "/blog" },
