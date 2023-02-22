@@ -7,7 +7,7 @@ import Options from "../Options/Options";
 const Quiz = ({ qn, count }) => {
   const { question, options, correctAnswer } = qn;
   const handleEyeClick = () => {
-    toast.success(correctAnswer);
+    toast(correctAnswer);
   };
   return (
     <div className="md:w-[700px] md:mx-auto h-auto my-6 shadow-md p-2">

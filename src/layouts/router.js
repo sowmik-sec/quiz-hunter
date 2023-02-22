@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Blog from "../components/Blog/Blog";
+import NotFoundRoute from "../components/NotFoundRoute/NotFoundRoute";
 import Quizzes from "../components/Quizzes/Quizzes";
 import Statistics from "../components/Statistics/Statistics";
 import Topics from "../components/Topics/Topics";
@@ -31,5 +32,9 @@ export const router = createBrowserRouter([
           ),
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFoundRoute />,
   },
 ]);
