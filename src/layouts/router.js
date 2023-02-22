@@ -6,6 +6,10 @@ import Statistics from "../components/Statistics/Statistics";
 import Topics from "../components/Topics/Topics";
 import { Main } from "./Main";
 
+const fetchData = () => {
+  return fetch(`https://openapi.programming-hero.com/api/quiz`);
+};
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -14,14 +18,18 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Topics />,
-        loader: () => fetch(`https://openapi.programming-hero.com/api/quiz`),
+        loader: () => fetchData(),
       },
       {
         path: "/topics",
         element: <Topics />,
-        loader: () => fetch(`https://openapi.programming-hero.com/api/quiz`),
+        loader: () => fetchData(),
       },
-      { path: "/statistics", element: <Statistics /> },
+      {
+        path: "/statistics",
+        element: <Statistics />,
+        loader: () => fetchData(),
+      },
       { path: "/blog", element: <Blog /> },
       {
         path: "/quiz/:quizId",
