@@ -1,13 +1,22 @@
 import React, { useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 
-const Options = ({ option, correctAnswer }) => {
+const Options = ({
+  option,
+  correctAnswer,
+  rightAns,
+  setRightAns,
+  wrongAns,
+  setWrongAns,
+}) => {
   const handleChange = (e) => {
     const userAns = e.target.value;
     if (correctAnswer === userAns) {
       toast.success("Correct ans");
+      setRightAns(rightAns + 1);
     } else {
       toast.error("Wrong ans");
+      setWrongAns(wrongAns + 1);
     }
   };
   return (

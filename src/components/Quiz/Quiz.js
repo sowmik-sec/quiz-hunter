@@ -4,7 +4,7 @@ import React from "react";
 import { toast } from "react-hot-toast";
 import Options from "../Options/Options";
 
-const Quiz = ({ qn, count }) => {
+const Quiz = ({ qn, count, rightAns, setRightAns, wrongAns, setWrongAns }) => {
   const { question, options, correctAnswer } = qn;
   const handleEyeClick = () => {
     toast(correctAnswer);
@@ -19,7 +19,15 @@ const Quiz = ({ qn, count }) => {
       </div>
       <div className="grid md:grid-cols-2 text-left">
         {options.map((option) => (
-          <Options option={option} correctAnswer={correctAnswer} key={option} />
+          <Options
+            option={option}
+            correctAnswer={correctAnswer}
+            key={option}
+            rightAns={rightAns}
+            setRightAns={setRightAns}
+            wrongAns={wrongAns}
+            setWrongAns={setWrongAns}
+          />
         ))}
       </div>
     </div>
